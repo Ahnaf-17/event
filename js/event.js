@@ -19,3 +19,17 @@ tomatoButton.addEventListener('click', makeTomato)
 function makeTomato(){
     document.body.style.backgroundColor = 'tomato'
 }
+
+// will use always 
+document.getElementById('make-pink').addEventListener('click',function(){
+    document.body.style.backgroundColor = 'pink'
+})
+
+document.getElementById('btn-update').addEventListener('click', function(){
+    const inputField = document.getElementById('input-text');
+    const inputText = inputField.value;
+    const p = document.getElementById('text-display')
+    p.innerText = inputText
+    inputField.value = '';
+
+})
