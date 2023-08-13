@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment box</title>
+</head>
+
+<body>
+    <h1>Add your comment</h1>
+    <div id="cmt-container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores, inventore delectus laudantium aut
+            modi alias tenetur, provident harum quae officiis obcaecati placeat quia ea blanditiis amet, at incidunt?
+            Necessitatibus!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores, inventore delectus laudantium aut
+            modi alias tenetur, provident harum quae officiis obcaecati placeat quia ea blanditiis amet, at incidunt?
+            Necessitatibus!</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores, inventore delectus laudantium aut
+            modi alias tenetur, provident harum quae officiis obcaecati placeat quia ea blanditiis amet, at incidunt?
+            Necessitatibus!</p>
+    </div>
+
+    <div>
+        <textarea name="" id="new-comment" cols="50" rows="5"></textarea><br>
+        <button id="btn-post">Post</button>
+    </div>
+
+    <!-- <script src="js/event.js"></script> -->
+    <script>
+        document.getElementById('btn-post').addEventListener('click',function(){
+    // get the comment 
+    const cmtBox =  document.getElementById('new-comment');
+    const newCmnt = cmtBox.value;
+
+    const cmtContainer = document.getElementById('cmt-container');
+    const p = document.createElement('p')
+    p.innerText = newCmnt;
+    cmtContainer.appendChild(p);
+    cmtBox.value = '';
+
+})
+    </script>
+
+</body>
+
+</html>

@@ -33,3 +33,17 @@ document.getElementById('btn-update').addEventListener('click', function(){
     inputField.value = '';
 
 })
+
+// comment post 
+
+// add event listener 
+document.getElementById('btn-post').addEventListener('click',function(){
+    // get the comment 
+    const cmtBox =  document.getElementById('new-comment');
+    const newCmnt = cmtBox.value;
+
+    const cmtContainer = document.getElementById('cmt-container');
+    const p = document.createElement('p')
+    p.innerText = newCmnt;
+    cmtContainer.appendChild(p);
+})
